@@ -1,0 +1,220 @@
+
+      /* Define CSS custom properties */
+      :root {
+         --primary: #6366f1;
+         --bg: #020617;
+         --surface: rgba(255,255,255,0.03);
+         --accent: #3b82f6;
+         --success: #10b981;
+         --danger: #ef4444;
+         --text-primary: #f1f5f9;
+         --text-muted: #64748b;
+      }
+
+      /* Global styles */
+      * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+
+      body {
+         font-family: 'Inter', sans-serif;
+         font-size: 16px;
+         line-height: 1.5;
+         color: var(--text-primary);
+         background-color: var(--bg);
+      }
+
+      /* Keyframe animations */
+      @keyframes fadeIn {
+         from {
+            opacity: 0;
+         }
+         to {
+            opacity: 1;
+         }
+      }
+
+      @keyframes slideUp {
+         from {
+            transform: translateY(100px);
+         }
+         to {
+            transform: translateY(0);
+         }
+      }
+
+      @keyframes pulse {
+         from {
+            transform: scale(1);
+         }
+         50% {
+            transform: scale(1.1);
+         }
+         to {
+            transform: scale(1);
+         }
+      }
+
+      @keyframes glow {
+         from {
+            box-shadow: 0 0 20px rgba(99,102,241,0.1);
+         }
+         to {
+            box-shadow: 0 0 40px rgba(99,102,241,0.2);
+         }
+      }
+
+      /* Glass morphism classes */
+      .glass {
+         backdrop-filter: blur(20px);
+         background: rgba(255,255,255,0.04);
+         border: 1px solid rgba(255,255,255,0.08);
+      }
+
+      /* Custom scrollbar styling */
+      ::-webkit-scrollbar {
+         width: 10px;
+         height: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb {
+         background-color: var(--primary);
+         border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-track {
+         background-color: var(--bg);
+      }
+
+      /* Smooth hover/focus transitions on all interactive elements */
+      a, button, input, textarea {
+         transition: all 0.2s ease-in-out;
+      }
+
+      a:hover, button:hover, input:hover, textarea:hover {
+         opacity: 0.8;
+      }
+
+      a:focus, button:focus, input:focus, textarea:focus {
+         outline: none;
+         box-shadow: 0 0 0 2px var(--primary);
+      }
+
+      /* Responsive breakpoints */
+      @media (max-width: 768px) {
+         /* Mobile styles */
+         .navbar {
+            flex-direction: column;
+         }
+      }
+
+      @media (max-width: 480px) {
+         /* Small mobile styles */
+         .hero-section {
+            padding: 20px;
+         }
+      }
+
+      /* Navbar styles */
+      .navbar {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         padding: 20px;
+         background-color: var(--surface);
+         border-bottom: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .navbar .logo {
+         font-size: 24px;
+         font-weight: bold;
+         color: var(--primary);
+      }
+
+      /* Hero section styles */
+      .hero-section {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 40px;
+         background-image: linear-gradient(to bottom, var(--primary), var(--accent));
+         color: var(--text-primary);
+      }
+
+      .hero-section .title {
+         font-size: 48px;
+         font-weight: bold;
+         margin-bottom: 20px;
+      }
+
+      .hero-section .description {
+         font-size: 18px;
+         margin-bottom: 40px;
+      }
+
+      /* Cards grid styles */
+      .cards-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 20px;
+         padding: 20px;
+      }
+
+      .card {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 20px;
+         background-color: var(--surface);
+         border: 1px solid rgba(255,255,255,0.08);
+         border-radius: 10px;
+      }
+
+      .card .title {
+         font-size: 18px;
+         font-weight: bold;
+         margin-bottom: 10px;
+      }
+
+      .card .price {
+         font-size: 16px;
+         color: var(--primary);
+      }
+
+      /* Modal styles */
+      .modal {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0,0,0,0.5);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .modal-content {
+         background-color: var(--surface);
+         padding: 20px;
+         border: 1px solid rgba(255,255,255,0.08);
+         border-radius: 10px;
+      }
+
+      /* Footer styles */
+      .footer {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 20px;
+         background-color: var(--surface);
+         border-top: 1px solid rgba(255,255,255,0.08);
+      }
+
+      .footer .copyright {
+         font-size: 14px;
+         color: var(--text-muted);
+      }
+   
